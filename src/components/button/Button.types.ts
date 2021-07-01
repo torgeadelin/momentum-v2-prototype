@@ -40,5 +40,5 @@ export interface MomentumButtonProps
    */
   disabled?: boolean;
 
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }

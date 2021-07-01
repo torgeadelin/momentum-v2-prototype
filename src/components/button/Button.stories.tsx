@@ -15,10 +15,14 @@ storiesOf('Button', module)
 
 const render = (props: MomentumButtonProps) => {
   return (
-    <div style={{backgroundColor: 'black', padding: '2rem'}}>
-      <Button {...props} onPress={() => alert('hii')}/>
-      <Button {...props}/>
-      <Button />
+    <div style={{ backgroundColor: "black", padding: "2rem" }}>
+      <Button {...props} onPress={() => alert("hii")}>
+        Hi Button
+      </Button>
+      <Button {...props}>Button</Button>
+      <Button {...props} disabled>
+        Button 1
+      </Button>
     </div>
   );
 }

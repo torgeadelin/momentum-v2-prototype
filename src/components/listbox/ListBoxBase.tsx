@@ -19,7 +19,6 @@ const ListBoxBase = <T extends unknown>(props: MomentumListBoxBaseProps<T>, ref:
       autoFocus: props.autoFocus,
       disallowEmptySelection: true,
       ...otherProps,
-      isVirtualized: true,
     },
     state,
     ref
@@ -27,15 +26,25 @@ const ListBoxBase = <T extends unknown>(props: MomentumListBoxBaseProps<T>, ref:
 
   return (
     <ListBoxContext.Provider value={state}>
-      <ul {...listBoxProps} ref={ref} className={classnames(styles.listBoxWrapper)}>
-        {[...state.collection].map((item) => (
-          item.hasChildNodes 
-            ? <ListBoxSection key={item.key} section={item} header={item.rendered}/>
-            : <ListBoxOption item={item} key={item.key}/>
-          ))}
+      <ul
+        {...listBoxProps}
+        ref={ref}
+        className={classnames(styles.listBoxWrapper)}
+      >
+        {[...state.collection].map((item) =>
+          item.hasChildNodes ? (
+            <ListBoxSection
+              key={item.key}
+              section={item}
+              header={item.rendered}
+            />
+          ) : (
+            <ListBoxOption item={item} key={item.key} />
+          )
+        )}
       </ul>
     </ListBoxContext.Provider>
-  )
+  );
 }
 
 

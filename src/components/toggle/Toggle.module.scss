@@ -8,8 +8,10 @@
 
   display: flex;
   font-size: 1rem;
+  align-items: center;
 
   svg {
+    margin-right: 0.5rem;
     rect {
       &[data-selected="true"] {
         fill: var(--inputBackground-accent);

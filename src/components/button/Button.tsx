@@ -4,18 +4,14 @@ import { FocusRing } from "@react-aria/focus";
 
 import styles from "./Button.module.scss";
 import { MomentumButtonProps } from "./";
-import { useDOMRef, DOMRef, } from "utils/refs";
 import { useButton } from "@react-aria/button";
 import { mergeProps } from "utils/mergeProps";
 
 const Button = (props: MomentumButtonProps, ref: RefObject<HTMLButtonElement>) => {
   const { className, variant = "primary", disabled = false } = props;
 
-  const { buttonProps } = useButton(
-    { elementType: "button" },
-    ref
-  );
-  
+  const { buttonProps } = useButton({ elementType: "button" }, ref);
+
   const _props = mergeProps(props, buttonProps);
 
   return (

@@ -1,6 +1,5 @@
 import {ListBoxOption} from './';
 import {render} from '@testing-library/react';
-import React from 'react';
 
 describe('ListBoxOption', () => {
   it('renders correctly with default props', () => {
