@@ -1,0 +1,60 @@
+.wrapper {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-right: 20px;
+
+  --button-disabled: rgba(255, 255, 255, 0.2);
+  --button-disabled-text: rgba(255, 255, 255, 0.4);
+}
+
+.focusRing {
+  --button-focus-ring: rgba(100, 180, 250, 1);
+  outline: none;
+  box-shadow: 0 0 0 1pt var(--button-focus-ring);
+}
+
+.primary {
+  // Temporary vars
+  --button-primary: rgba(255, 255, 255, 0.95);
+  --button-primary-hover: rgba(255, 255, 255, 0.8);
+  --button-primary-pressed: rgba(255, 255, 255, 0.7);
+  --button-primary-text: rgba(0, 0, 0, 0.95);
+
+  background-color: var(--button-primary);
+  color: var(--button-primary-text);
+
+  &:hover {
+    background-color: var(--button-primary-hover);
+  }
+
+  &:active {
+    background-color: var(--button-primary-pressed);
+  }
+
+  &:disabled {
+    background-color: var(--button-disabled);
+    color: var(--button-disabled-text);
+  }
+}
+
+.secondary {
+  // Temporary vars
+  --button-seconday: rgba(255, 255, 255, 0);
+  --button-secondary-outline: rgba(255, 255, 255, 0.3);
+  --button-seconday-hover: rgba(255, 255, 255, 0.07);
+  --button-seconday-pressed: rgba(255, 255, 255, 0.2);
+  --button-seconday-text: rgba(255, 255, 255, 0.95);
+
+  background-color: var(--button-seconday);
+  color: var(--button-seconday-text);
+  border: 1px solid var(--button-secondary-outline);
+
+  &:hover {
+    background-color: var(--button-seconday-hover);
+  }
+
+  &:active {
+    background-color: var(--button-seconday-pressed);
+  }
+}

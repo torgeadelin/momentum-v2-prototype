@@ -1,0 +1,22 @@
+.listBoxItem {
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  border-radius: 8px;
+
+  &.focused {
+    --button-focus-ring: rgba(100, 180, 250, 1);
+    outline: none;
+    box-shadow: 0 0 0 1pt var(--button-focus-ring);
+  }
+
+  &.hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  &.pressed {
+    background-color: rgba(255, 255, 255, 0.11);
+  }
+}

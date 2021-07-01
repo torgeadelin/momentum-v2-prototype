@@ -1,0 +1,29 @@
+import React from 'react';
+import classnames from 'classnames';
+
+import styles from './{{componentName}}.module.scss';
+import { Momentum{{componentName}}Props} from './';
+import {useDOMRef, DOMRef} from 'utils/refs'
+
+const {{componentName}} = (props: Momentum{{componentName}}Props, ref: DOMRef<HTMLDivElement>) => {
+  const {className} = props;
+
+  let domRef = useDOMRef(ref);
+
+  return (
+    <div
+      {...props}
+      ref={domRef}
+      className={classnames(styles.wrapper, className)}
+    >
+      {/* Implementation goes here */}
+    </div>
+  );
+}
+
+/**
+ * TODO: Add description of component here.
+ */
+const _{{componentName}} = React.forwardRef({{componentName}});
+export {_{{componentName}} as {{componentName~}}};
+

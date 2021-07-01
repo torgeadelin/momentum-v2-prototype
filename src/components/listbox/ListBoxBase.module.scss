@@ -1,0 +1,11 @@
+.listBoxWrapper {
+  position: absolute;
+  margin: 4px 0 0 0;
+  min-width: 12rem;
+  padding: 0;
+  list-style: none;
+  background: var(--bg-main);
+  padding: 7px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}

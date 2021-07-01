@@ -1,0 +1,40 @@
+.label {
+  --inputBackground-accent: rgba(100, 180, 250, 1);
+  --inputBackground-accent-hover: rgba(52, 146, 235, 1);
+  --inputBackground-accent-pressed: rgba(17, 112, 207, 1);
+  --inputBackground-darkUi: rgba(18, 18, 18, 1);
+
+  --disabled: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  font-size: 1rem;
+
+  svg {
+    rect {
+      &[data-selected="true"] {
+        fill: var(--inputBackground-accent);
+
+        &:hover {
+          fill: var(--inputBackground-accent-hover);
+        }
+
+        &:active {
+          fill: var(--inputBackground-accent-pressed);
+        }
+      }
+
+      &[data-selected="false"] {
+        fill: var(--disabled);
+      }
+    }
+
+    circle {
+      fill: var(--inputBackground-darkUi);
+    }
+  }
+}
+.focusRing {
+  --button-focus-ring: rgba(100, 180, 250, 1);
+  outline: none;
+  outline: 1px solid var(--button-focus-ring);
+}
